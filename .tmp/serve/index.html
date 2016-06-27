@@ -49,7 +49,7 @@
   <ba-sidebar ng-if="showSideBar"></ba-sidebar>
   <page-top></page-top>
 
-  <div class="al-main">
+  <div class="al-main" ng-style="showSideBar === 0 && {'margin-left': '0px'}">
     <div class="al-content">
       <content-top></content-top>
       <div ui-view></div>
@@ -146,12 +146,13 @@
 <script src="app/pages/form/form.module.js"></script>
 <script src="app/pages/maps/maps.module.js"></script>
 <script src="app/pages/profile/profile.module.js"></script>
+<script src="app/pages/projects/projects.module.js"></script>
 <script src="app/pages/tables/tables.module.js"></script>
 <script src="app/pages/ui/ui.module.js"></script>
 <script src="app/theme/components/components.module.js"></script>
+<script src="app/pages/charts/chartJs/chartJs.module.js"></script>
 <script src="app/pages/charts/amCharts/amCharts.module.js"></script>
 <script src="app/pages/charts/chartist/chartist.module.js"></script>
-<script src="app/pages/charts/chartJs/chartJs.module.js"></script>
 <script src="app/pages/charts/morris/morris.module.js"></script>
 <script src="app/pages/components/mail/mail.module.js"></script>
 <script src="app/pages/components/timeline/timeline.module.js"></script>
@@ -175,6 +176,7 @@
 <script src="app/theme/theme.service.js"></script>
 <script src="app/pages/profile/ProfileModalCtrl.js"></script>
 <script src="app/pages/profile/ProfilePageCtrl.js"></script>
+<script src="app/pages/projects/ProjectsPageCtrl.js"></script>
 <script src="app/pages/tables/TablesPageCtrl.js"></script>
 <script src="app/theme/components/toastrLibConfig.js"></script>
 <script src="app/theme/directives/animatedChange.js"></script>
@@ -190,10 +192,10 @@
 <script src="app/theme/services/fileReader.js"></script>
 <script src="app/theme/services/preloader.js"></script>
 <script src="app/theme/services/stopableInterval.js"></script>
-<script src="app/pages/charts/chartist/chartistCtrl.js"></script>
 <script src="app/pages/charts/chartJs/chartJs1DCtrl.js"></script>
 <script src="app/pages/charts/chartJs/chartJs2DCtrl.js"></script>
 <script src="app/pages/charts/chartJs/chartJsWaveCtrl.js"></script>
+<script src="app/pages/charts/chartist/chartistCtrl.js"></script>
 <script src="app/pages/charts/morris/morrisCtrl.js"></script>
 <script src="app/pages/components/mail/MailTabCtrl.js"></script>
 <script src="app/pages/components/mail/mailMessages.js"></script>
@@ -249,11 +251,11 @@
 <script src="app/theme/filters/image/kameleonImg.js"></script>
 <script src="app/theme/filters/image/profilePicture.js"></script>
 <script src="app/theme/filters/text/removeHtml.js"></script>
-<script src="app/pages/charts/amCharts/combinedChart/combinedChartCtrl.js"></script>
 <script src="app/pages/charts/amCharts/areaChart/AreaChartCtrl.js"></script>
 <script src="app/pages/charts/amCharts/barChart/BarChartCtrl.js"></script>
-<script src="app/pages/charts/amCharts/ganttChart/ganttChartCtrl.js"></script>
+<script src="app/pages/charts/amCharts/combinedChart/combinedChartCtrl.js"></script>
 <script src="app/pages/charts/amCharts/funnelChart/FunnelChartCtrl.js"></script>
+<script src="app/pages/charts/amCharts/ganttChart/ganttChartCtrl.js"></script>
 <script src="app/pages/charts/amCharts/lineChart/LineChartCtrl.js"></script>
 <script src="app/pages/charts/amCharts/pieChart/PieChartCtrl.js"></script>
 <script src="app/pages/components/mail/composeBox/composeBoxCtrl.js"></script>

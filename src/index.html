@@ -31,7 +31,7 @@
   <ba-sidebar ng-if="showSideBar"></ba-sidebar>
   <page-top></page-top>
 
-  <div class="al-main">
+  <div class="al-main" ng-style="showSideBar === 0 && {'margin-left': '0px'}">
     <div class="al-content">
       <content-top></content-top>
       <div ui-view></div>
