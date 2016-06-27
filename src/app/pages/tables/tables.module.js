@@ -26,14 +26,14 @@
           templateUrl: 'app/pages/tables/basic/tables.html',
           title: 'Basic Tables',
           sidebarMeta: {
-            order: 0,
+            order: 10,
           },
         }).state('tables.smart', {
           url: '/smart',
           templateUrl: 'app/pages/tables/smart/tables.html',
           title: 'Smart Tables',
           sidebarMeta: {
-            order: 100,
+            order: 0,
           },
         });
     $urlRouterProvider.when('/tables','/tables/basic');

@@ -16,3 +16,15 @@ angular.module('BlurAdmin', [
   'BlurAdmin.theme',
   'BlurAdmin.pages'
 ]);
+
+
+angular.module('BlurAdmin')
+  .run(function($rootScope, $location, $stateParams) {
+    $rootScope.showSideBar = true;
+
+    $rootScope.$on('$routeChangeSuccess', function(event, current) {
+      // Look at $location.path()
+      // If it isn't what you want, toggle showSideBar...
+      // $rootScope.showSideBar = true|false;
+    });
+  });
