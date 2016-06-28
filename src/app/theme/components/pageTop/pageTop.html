@@ -1,6 +1,21 @@
 <div class="page-top clearfix" scroll-position="scrolled" max-height="50" ng-class="{'scrolled': scrolled}">
-  <a href="#/dashboard" class="al-logo clearfix"><span>Blur</span>Admin</a>
-  <a href class="collapse-menu-link ion-navicon" ba-sidebar-toggle-menu></a>
+  <a href="#/projects/smart" class="al-logo clearfix"><span>C</span>ementify</a>
+  <a href class="collapse-menu-link ion-navicon" ng-if="showSideBar" ba-sidebar-toggle-menu></a>
+
+  <div class="search" ng-style = "{ 'overflow' : 'inherit'}">
+    <div class="btn-group dropdown-toggle" uib-dropdown keyboard-nav>
+        <button id="simple-btn-keyboard-nav" type="button" class="btn btn-primary" uib-dropdown-toggle>
+            Projects  <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
+            <li role="menuitem"><a href="#">Action</a></li>
+            <li role="menuitem"><a href="#">Another action</a></li>
+            <li role="menuitem"><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li role="menuitem"><a href="#">View All Projects</a></li>
+        </ul>
+    </div>
+  </div>
 
   <div class="search">
     <i class="ion-ios-search-strong" ng-click="startSearch()"></i>

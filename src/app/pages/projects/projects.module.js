@@ -31,7 +31,7 @@
         }).state('projects.smart', {
           url: '/smart',
           templateUrl: 'app/pages/projects/smart/tables.html',
-          title: 'Smart Projects',
+          title: 'All Projects',
           sidebarMeta: {
             order: 0,
           },
