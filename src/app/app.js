@@ -20,15 +20,23 @@ angular.module('BlurAdmin', [
 
 angular.module('BlurAdmin')
   .run(function($rootScope, $location, $stateParams) {
-    $rootScope.showSideBar = true;
+    $rootScope.showSideBar = 1;
     if( ($location.path()).indexOf('/projects') !== -1 ){
       console.log($location.path());
       $rootScope.showSideBar = 0;
     }
-    $rootScope.$on('$routeChangeSuccess', function(event, current) {
+    else{
+      $rootScope.showSideBar = 1;
+
+    }
+    $rootScope.$on('$stateChangeSuccess', function(event, current) {
       if( ($location.path()).indexOf('/projects') !== -1 ){
         console.log($location.path());
         $rootScope.showSideBar = 0;
+      }
+      else{
+        $rootScope.showSideBar = 1;
+
       }
 
       // Look at $location.path()
