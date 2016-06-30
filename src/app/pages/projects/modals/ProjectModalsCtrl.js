@@ -18,7 +18,9 @@
      vm.shipment = {};
 
      vm.arePersonalInfoPasswordsEqual = function () {
-       return vm.personalInfo.confirmPassword && vm.personalInfo.password == vm.personalInfo.confirmPassword;
+       var bool = vm.personalInfo.confirmPassword && vm.personalInfo.password == vm.personalInfo.confirmPassword;\
+       console.log("bool ",bool);
+       return bool;
      };
   }
 

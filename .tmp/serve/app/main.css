@@ -1,10 +1,4 @@
 @charset "UTF-8";
-
-.languageSelect {
-  margin-top: 10px;
-}
-
-
 .alert {
   color: #ffffff;
   font-size: 13px;
@@ -4435,13 +4429,9 @@ a.collapse-menu-link {
     margin: 0 0 0 -3px;
     height: 27px; }
 
-@media screen and (max-width: 890px) {
-   .search {
-    display: none; }
-  .languageSelect {
-    display: none; }
-
-  }
+@media screen and (max-width: 660px) {
+  .search {
+    display: none; } }
 
 @media screen and (max-width: 500px) {
   .page-top {
