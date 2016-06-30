@@ -1,7 +1,10 @@
 @charset "UTF-8";
+
 .languageSelect {
   margin-top: 10px;
 }
+
+
 .alert {
   color: #ffffff;
   font-size: 13px;
@@ -4433,7 +4436,7 @@ a.collapse-menu-link {
     height: 27px; }
 
 @media screen and (max-width: 890px) {
-  .search {
+   .search {
     display: none; }
   .languageSelect {
     display: none; }

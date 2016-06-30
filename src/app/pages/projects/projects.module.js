@@ -5,7 +5,9 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.projects', [])
+  angular.module('BlurAdmin.pages.projects', [
+    'BlurAdmin.pages.projects.modals' 
+  ])
     .config(routeConfig);
 
   /** @ngInject */

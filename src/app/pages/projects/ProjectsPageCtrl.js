@@ -9,7 +9,7 @@
       .controller('ProjectsPageCtrl', ProjectsPageCtrl);
 
   /** @ngInject */
-  function ProjectsPageCtrl($scope, $filter, editableOptions, editableThemes) {
+  function ProjectsPageCtrl($scope, $filter, $uibModal, editableOptions, editableThemes) {
 
     $scope.smartTablePageSize = 10;
 
@@ -695,6 +695,8 @@
     };
 
     $scope.addUser = function() {
+      console.log("here1");
+
       $scope.inserted = {
         id: $scope.users.length+1,
         name: '',
@@ -703,6 +705,21 @@
       };
       $scope.users.push($scope.inserted);
     };
+
+    $scope.open = function (page, size) {
+      $uibModal.open({
+        controller: 'ProjectModalsPageCtrl as vm',
+        animation: true,
+        templateUrl: page,
+        size: size,
+        resolve: {
+          items: function () {
+            return $scope.items;
+          }
+        }
+      });
+    };
+
 
     editableOptions.theme = 'bs3';
     editableThemes['bs3'].submitTpl = '<button type="submit" class="btn btn-primary btn-with-icon"><i class="ion-checkmark-round"></i></button>';

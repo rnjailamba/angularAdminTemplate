@@ -1,0 +1,42 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" ng-click="$dismiss()" aria-label="Close">
+      <em class="ion-ios-close-empty sn-link-close"></em>
+    </button>
+    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+  </div>
+  <div class="modal-body">
+
+      <div class="row">
+          <div class="col-md-12">
+              <ba-wizard>
+                  <ba-wizard-step title="Personal info" form="vm.personalInfoForm">
+                      <form name="vm.personalInfoForm" novalidate>
+                          <div class="row">
+                              <div class="col-md-6">
+                                  <div class="form-group has-feedback"
+                                       ng-class="{'has-error': vm.personalInfoForm.username.$invalid && (vm.personalInfoForm.username.$dirty || vm.personalInfoForm.$submitted)}">
+                                      <label for="exampleUsername1">Username</label>
+                                      <input type="text" class="form-control" id="exampleUsername1" name="username" placeholder="Username" ng-model="vm.personalInfo.username" required>
+                                      <span class="help-block error-block basic-block">Required</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </form>
+                  </ba-wizard-step>
+
+                  <ba-wizard-step title="Finish">
+                      <form class="form-horizontal" name="vm.finishForm" novalidate>
+                          Congratulations! You have successfully filled the form!
+                      </form>
+                  </ba-wizard-step>
+              </ba-wizard>
+          </div>
+      </div>
+
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" ng-click="$dismiss()">Save changes</button>
+  </div>
+</div>
